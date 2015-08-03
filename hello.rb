@@ -1,7 +1,8 @@
 require 'sinatra'
 
 get '/' do
-  'hello'
+  @name = ['Fido', 'Pongo', 'Ugo'].sample
+  erb :index
 end
 
 get '/secret' do
@@ -9,5 +10,5 @@ get '/secret' do
 end
 
 get '/hello' do
-	"<div style= 'border: 3px dashed green'> <img src= https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Sad-pug.jpg/200px-Sad-pug.jpg > </div>"
+  erb :index
 end
