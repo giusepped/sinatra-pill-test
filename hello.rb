@@ -10,5 +10,6 @@ get '/secret' do
 end
 
 get '/hello' do
+	@visitor = params[:name]
   erb :index
 end
